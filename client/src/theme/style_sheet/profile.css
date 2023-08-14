@@ -1,0 +1,15 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 1.2em auto;
+    text-align: center;
+    font-family: arial;
+    padding: 2em;
+    width: max(35%, 320px);
+  }
+
+
+.img-profile{
+    width: 30%;
+    margin: 10px auto;
+    border-radius: 100px;
+}

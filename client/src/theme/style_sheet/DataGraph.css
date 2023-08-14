@@ -1,0 +1,102 @@
+body {
+    font-family: "lato", sans-serif;
+  }
+  
+.container {
+  margin-top: 1.5em;
+  /* max-width: 1000px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  margin-bottom: 0.6em;
+
+}
+.header-row{
+  font-weight: bold;
+}
+
+.search-container{
+  margin: 0 auto;
+  margin-bottom: 0.8em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: max(50vw,300px);
+}
+  
+.search-bar{
+  width: max(80%,250px);
+}
+
+.search-button{
+  padding-top: 0.5em;
+  width: max(35%,100px);
+  margin-left: -0.1vw;
+}
+
+.button-refresh {
+  width: max(30%,40px);
+  background-color: #302f49;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding-right: 0.8em;
+  margin-left: 0.1em;
+  /* border-right: 1px solid white; */
+}
+
+.button-search{
+  width: max(30%,40px);
+  background-color: #302f49;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding-right: 0.8em;
+
+  /* border-right: 1px solid white; */
+}
+
+.rowsPerPage > input[type=number]::placeholder{
+  font-size: 80%;
+}
+.sort_button{
+  background-color: transparent;
+  padding: 0;
+  margin-left: 0.5w;
+  margin-left: 0.5vw;
+  width: fit-content;
+}
+
+.sort_button_icon{
+  vertical-align:center;
+  color:#302f49;
+}
+
+.active_link{
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.disabled_link{
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.rowsPerPage{
+  width: 35%;
+}
+
+.rows-input{
+  width: 100% !important;
+  padding: 6px !important;
+  margin: 0 !important;
+  border-radius: 5px;
+}
