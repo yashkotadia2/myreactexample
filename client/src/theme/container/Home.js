@@ -5,6 +5,19 @@ export default function Home(props)
 {    
     return(
     <>
+  {/*       <div class="container">
+            <div class="theme-switch">
+                <div class="switch"></div>
+            </div>
+            <div class="navigation">
+                <ul>
+                <a href="http://www.sashatran.com/" class="active" target="_blank">Home</a>
+                <a href="https://codepen.io/sashatran/" target="_blank">About</a>
+                <a href="https://instagram.com/sasha.codes/" target="_blank">Instagram</a>
+                <a href="https://twitter.com/sa_sha26" target="_blank">Twitter</a>
+                </ul>
+            </div>
+        </div> */}
         <main>
             <div className="intro">
                 <h1>A Web Developer</h1>

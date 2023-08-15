@@ -81,14 +81,15 @@ export default function Login(props)
         }
       }
 
-    const mouseDown = (e) => {
-        e.target.className = "fa fa-eye eye_container"
-        document.getElementById("togglePassword").type = "text";
-    };
-
-    const mouseUp = (e) => {
-        e.target.className = "fa fa-eye-slash eye_container"
-        document.getElementById("togglePassword").type = "password";
+      const togglePasswordShow = (e) => {
+        if(document.getElementById("togglePassword").type === 'text'){
+            e.target.className = "fa fa-eye-slash eye_container"
+            document.getElementById("togglePassword").type = "password";
+        }
+        else if(document.getElementById("togglePassword").type === 'password'){
+            e.target.className = "fa fa-eye eye_container"
+            document.getElementById("togglePassword").type = "text";
+        }
     };
 
     const handleGoogleLogin = (IResolveParams) => {
@@ -142,7 +143,7 @@ export default function Login(props)
                     <div style={{position: "relative"}}>
                         <label htmlFor="psw"><b>Password:</b></label>
                         <input type="password" id="togglePassword" placeholder="Enter Password" onChange={handlePasswordChange} value={password} name="psw" required/>
-                        <div onMouseDown={mouseDown} onMouseUp={mouseUp}><i class="fa fa-eye-slash eye_container"></i></div>
+                        <div onClick={togglePasswordShow}><i class="fa fa-eye-slash eye_container"></i></div>
                     </div>
                     <button className='action_btn' type="submit" onClick={handleLogin}>Login</button>
                     <div className='social_icons'>
