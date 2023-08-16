@@ -13,11 +13,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const id = v4()
 
-const socket = io('http://192.168.1.36:4000');
+const socket = io('http://13.234.240.195:4000');
 
 var infoSent = false
 
 // var recentMessages = [];
+
 
 var recentMessages = []
 
@@ -200,11 +201,13 @@ const Chat = () => {
 
     const updateCurrentUserForChat = e => {
 
-        const bubble = document.querySelectorAll('.left-msg')
-        
-        console.log(JSON.stringify(bubble))
+        const bubbleLeft = document.querySelectorAll('.left-msg')
+        for (const el of bubbleLeft) {
+            el.remove();
+        }
 
-        for (const el of bubble) {
+        const bubbleRight = document.querySelectorAll('.right-msg')
+        for (const el of bubbleRight) {
             el.remove();
         }
 

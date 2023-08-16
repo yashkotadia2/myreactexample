@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 4000;
+const PORT = 80;
 const http = require('http').Server(app);
 const cors = require('cors');
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "http://192.168.1.36:3000"
+        origin: "https://kotireactdemo.netlify.app"
     }
 });
 app.use(cors());
