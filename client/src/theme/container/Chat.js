@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const id = v4()
 
-const socket = io('http://3.110.195.158:4000');
+const socket = io('http://192.168.1.36:4000');
 
 var infoSent = false
 
@@ -91,7 +91,8 @@ const Chat = () => {
 
         if(Object.keys(messageReceivedObj).length > 0){
 
-            if(isCurrentUser){
+            if(isCurrentUser && messageReceivedObj.userId === currentUser.userId){
+        
                 if(messageReceivedObj.userId === currentUser.userId){
                     if(recentMessages.find(e => e.userId === currentUser.userId) !== undefined){
                         let u = recentMessages.find(e => e.userId === currentUser.userId)
@@ -198,6 +199,15 @@ const Chat = () => {
     };
 
     const updateCurrentUserForChat = e => {
+
+        const bubble = document.querySelectorAll('.left-msg')
+        
+        console.log(JSON.stringify(bubble))
+
+        for (const el of bubble) {
+            el.remove();
+        }
+
         console.log("E", e);
         let updatedValue = {};
         updatedValue = {

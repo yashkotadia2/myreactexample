@@ -69,11 +69,7 @@ export default function Login(props)
         if(userJson.find(e => e.user_email === userName && e.user_password === password) !== undefined)
         {
             dispatch(isLoggedInOrNot(true));
-
-            toast.info('Successfully Logged In!')
-            setTimeout(() => {
-                navigate("/")   
-            }, 2600);  
+            navigate("/")    
         }
         else
         {
