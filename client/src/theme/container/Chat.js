@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const id = v4()
 
-const socket = io('http://13.234.240.195:4000');
+const socket = io('http://localhost:4000');
 
 var infoSent = false
 
@@ -246,10 +246,10 @@ const Chat = () => {
             });
 
             setOnlineUsers(onlineUsersToDisplay)
-
         }
     }));
     
+
 /*     useEffect(()=>{
 
         socket.on("onlineUsers",((availableUsers) => {
@@ -274,7 +274,7 @@ const Chat = () => {
 
         console.log("ACCEPTED U:----", acceptedUsersL);
 
-        if(acceptedUsersL.length === 1){
+        if(acceptedUsersL.length === 1 || acceptedUsersL.length === 0){
             setAcceptedUsersList([])
         }
         else{
