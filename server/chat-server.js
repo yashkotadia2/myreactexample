@@ -5,7 +5,7 @@ const http = require('http').Server(app);
 const cors = require('cors');
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "https://kotireactdemo.netlify.app/"
+        origin: "https://kotireactdemo.netlify.app"
     }
 });
 app.use(cors());
