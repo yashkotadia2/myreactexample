@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const id = v4()
 
-const socket = io('http://ip-172-31-45-118.ap-south-1.compute.internal:4000');
+const socket = io('http://65.1.65.144:4000');
 
 var infoSent = false
 
