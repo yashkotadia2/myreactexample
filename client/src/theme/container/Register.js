@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useNavigate} from "react-router-dom"
+import axios from 'axios';
+
 
 import * as validation from '../helper/validation';
 import { add_user } from '../redux/slice/user_info'
@@ -105,6 +107,20 @@ export default function Register(props)
         console.table(updatedState);
         dispatch(add_user(updatedState));
 
+        let newObj = {
+            name: updatedState.profile.firstName,
+            email: updatedState.profile.email,
+            salary: updatedState.profile.age
+        }
+
+
+        axios
+            .post('http://localhost:5000/api/employee/add', newObj)
+            .then(() => console.log('Registration Done! Data Sent to DB'))
+            .catch(err => {
+                console.error(err);
+            });
+
         user_credentials.user_email = email;
         user_credentials.user_password = password;
 
@@ -123,6 +139,12 @@ export default function Register(props)
             navigate("/login")
           }, 2600);   
       }
+
+    const PostDataToDB = async (e) => {
+        e.preventDefault();
+
+        const res = await fetch("http://localhost:4000//api/employee/add")
+    }  
 
     function Position(obj){
         var currentTop = 0;
