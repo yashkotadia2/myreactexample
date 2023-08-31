@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const id = v4()
 
-const socket = io('http://65.1.65.144:4000');
+const socket = io('https://chat-server-bon2.onrender.com');
 
 var infoSent = false
 
